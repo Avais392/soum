@@ -1,17 +1,18 @@
-import React from 'react';
-import {FlatList, StyleSheet} from 'react-native';
+import React from "react";
+import { FlatList, StyleSheet } from "react-native";
+import TransactionItem from "./TransactionItem";
 
-const Transactions = ({transactions}) => {
-
-    return (
-        <FlatList
-            initialNumToRender={100}
-            keyExtractor={(item) => item.id.toString()}
-        />
-    )
-}
+const Transactions = ({ transactions }) => {
+  return (
+    <FlatList
+      data={transactions}
+      initialNumToRender={100}
+      keyExtractor={(item) => item.id.toString()}
+      renderItem={({ item, index }) => <TransactionItem transaction={item} />}
+    />
+  );
+};
 
 export default Transactions;
 
-const styles = StyleSheet.create({})
-
+const styles = StyleSheet.create({});

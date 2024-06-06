@@ -6,7 +6,6 @@ const TransactionItem = ({ transaction }) => {
   const {
     location: { city, address },
     date,
-    txnType,
     amount,
   } = transaction;
   return (

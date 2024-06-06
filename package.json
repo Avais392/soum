@@ -5,6 +5,7 @@
 		"start": "expo start --tunnel",
 		"pretest": "npm install",
 		"test": "cross-env CI=true jest"
+	
 	},
 	"dependencies": {
 		"@expo/ngrok": "^2.5.0",
